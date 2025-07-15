@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <style>
+        body {
+            font-family: Arial;
+            background: #f2f2f2;
+            text-align: center;
+            padding: 50px;
+        }
+        input {
+            padding: 10px;
+            width: 200px;
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+        }
+        .weather {
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>🌤️ Weather App</h1>
+    <form action="/" method="POST">
+        <input type="text" name="city" placeholder="Enter city name" required>
+        <button type="submit">Check</button>
+    </form>
+
+    <% if (weather) { %>
+        <div class="weather">
+            <h2><%= weather.location %>, <%= weather.country %></h2>
+            <img src="<%= weather.icon %>" alt="icon">
+            <h3><%= weather.condition %></h3>
+            <p><b>Temperature:</b> <%= weather.temp_c %>°C</p>
+            <p><b>Feels Like:</b> <%= weather.feelslike_c %>°C</p>
+            <p><b>Humidity:</b> <%= weather.humidity %>%</p>
+            <p><b>Wind:</b> <%= weather.wind_kph %> km/h</p>
+        </div>
+    <% } else if (error) { %>
+        <p style="color: red;"><%= error %></p>
+    <% } %>
+</body>
+</html>
