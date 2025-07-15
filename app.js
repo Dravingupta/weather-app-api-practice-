@@ -13,7 +13,7 @@ app.get("/", (req, res) => {
 
 app.post("/", async (req, res) => {
     const city = req.body.city;
-    const API_KEY = "f129ef15a81d4415af1101444251507";
+    const API_KEY = "main nhi bataunga ";
     const url = `http://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}&aqi=yes`;
 
     try {
