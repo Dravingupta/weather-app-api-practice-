@@ -8,7 +8,7 @@ This is a simple weather app built using **Express.js** and **EJS**. The main go
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/Dravingupta/weather-app-api-practice.git
+git clone https://github.com/Dravingupta/weather-app-api-practice-.git
 cd weather-app-api-practice
 
 # 2. Install dependencies
